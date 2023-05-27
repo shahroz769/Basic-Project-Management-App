@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Drag & Drop Items</title>
+</head>
+
+<body>
+    <div class="columnInput">
+        <input type="text" id="columnName" placeholder="Column Name...">
+        <div>
+            <div onclick="addColumn()" class="add-column-btn">Add Column</div>
+        </div>
+    </div>
+    <p id="errorMessage">Please enter column name...</p>
+    <div id="container" class="container">
+        <!-- <div id="column1" class="column">
+            <div class="input">
+                <input type="text" id="itemName1" placeholder="Item Name...">
+                <div class="add-item-btn" onclick="addItem(1)">Add Item</div>
+            </div>
+            <p id="errorMessageInList1" class="errorMessageInList">Please enter column name...</p>
+            <div class="outline">
+                <div class="title">
+                    <h1>ToDo</h1>
+                </div>
+                <div id="list1" class="lists">
+                    <div class="list" draggable="true">Item 1</div>
+                    <div class="list" draggable="true">Item 2</div>
+                    <div class="list" draggable="true">Item 3</div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sortable/0.8.0/js/sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.13.0/Sortable.min.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
