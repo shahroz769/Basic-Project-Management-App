@@ -32,6 +32,7 @@ h1 {
     align-items: center;
     scrollbar-color: #c5c5c5 #404149;
     scrollbar-width: thin;
+    margin-top: 32px;
 }
 
 .container::-moz-scrollbar {
@@ -213,5 +214,15 @@ input {
     max-width: 768px;
     border-radius: 8px;
     overflow: hidden;
-    margin: 60px 0 50px 0;
+    margin-top: 60px;
+}
+
+@media screen and (width <=500px) {
+    .container {
+        margin-top: 8px;
+    }
+
+    .columnInput {
+        margin-top: 32px;
+    }
 }
