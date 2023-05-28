@@ -64,6 +64,11 @@ function addColumn() {
     // Create the heading
     const heading = document.createElement("h1");
     heading.textContent = columnName;
+    // create delete button div
+    const deleteButton = document.createElement("div");
+    deleteButton.setAttribute("class", "delete-column-btn");
+    deleteButton.setAttribute("onclick", "deleteColumn(" + counter + ")");
+    deleteButton.textContent = "Delete Column";
     // Create the list div
     const list = document.createElement("div");
     list.setAttribute("id", listId);
@@ -74,7 +79,9 @@ function addColumn() {
     column.appendChild(input);
     column.appendChild(errorMessageInList);
     column.appendChild(outline);
+    column.appendChild(deleteButton);
     container.appendChild(column);
+    // Reset the input field
     let columnInput = document.getElementById("columnName");
     columnInput.value = "";
     // Initialize Sortable for the new column
@@ -83,4 +90,9 @@ function addColumn() {
         animation: 150,
     });
     counter += 1;
+}
+
+function deleteColumn(counter) {
+    columnToDelete = document.getElementById("column" + counter);
+    columnToDelete.remove();
 }

@@ -168,8 +168,23 @@ input {
     cursor: pointer;
 }
 
+.delete-column-btn{
+    background-color: #CBADF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    max-width: 100%;
+    color: #18171F;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin: 12px;
+}
+
 .add-item-btn:active,
-.add-column-btn:active {
+.add-column-btn:active, .delete-column-btn:active {
     background-color: #D8B8FF;
 }
 
