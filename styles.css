@@ -32,7 +32,7 @@ h1 {
     align-items: center;
     scrollbar-color: #c5c5c5 #404149;
     scrollbar-width: thin;
-    margin-top: 32px;
+    margin-top: 60px;
 }
 
 .container::-moz-scrollbar {
@@ -66,17 +66,19 @@ h1 {
 }
 
 .column {
-    width: 350px;
-    min-width: 300px;
-    margin: 24px;
+    width: 370px;
+    min-width: 320px;
+    margin-right: 24px;
     display: flex;
     flex-direction: column;
-}
-
-.outline {
     background-color: #24232C;
     border-radius: 12px;
 }
+
+/* .outline {
+    background-color: #24232C;
+    border-radius: 12px;
+} */
 
 .lists {
     max-height: 60vh;
@@ -121,7 +123,7 @@ h1 {
 }
 
 .list {
-    margin: 16px;
+    margin: 12px;
     display: flex;
     align-items: center;
     cursor: grab;
@@ -137,6 +139,7 @@ h1 {
     margin-bottom: 16px;
     border-radius: 8px;
     overflow: hidden;
+    margin: 12px;
 }
 
 input {
@@ -153,7 +156,7 @@ input {
 }
 
 .add-item-btn {
-    background-color: #A4FFAF;
+    background-color: #CBADF0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -167,11 +170,11 @@ input {
 
 .add-item-btn:active,
 .add-column-btn:active {
-    background-color: #c5fccc;
+    background-color: #D8B8FF;
 }
 
 .add-column-btn {
-    background-color: #A4FFAF;
+    background-color: #CBADF0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -188,7 +191,7 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #A4FFAF;
+    color: #CBADF0;
 }
 
 #errorMessage {
@@ -202,6 +205,8 @@ input {
 .errorMessageInList {
     margin-top: -10px;
     margin-bottom: 6px;
+    margin-left: 12px;
+    margin-right: 12px;
     width: 90%;
     max-width: 768px;
     color: #FF5959;
@@ -217,12 +222,24 @@ input {
     margin-top: 60px;
 }
 
-@media screen and (width <=500px) {
-    .container {
-        margin-top: 8px;
-    }
+@media screen and (width <=768px) {
 
     .columnInput {
+        margin-top: 48px;
+    }
+
+    .container {
+        margin-top: 48px;
+    }
+}
+
+@media screen and (width <=500px) {
+
+    .columnInput {
+        margin-top: 32px;
+    }
+
+    .container {
         margin-top: 32px;
     }
 }
