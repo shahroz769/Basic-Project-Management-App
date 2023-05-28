@@ -146,6 +146,9 @@ img {
     width: 24px;
     cursor: pointer;
 }
+.list-right:hover path{
+    fill: #222222;
+}
 
 .input {
     display: flex;
@@ -277,5 +280,19 @@ input {
 
     .container {
         margin-top: 32px;
+    }
+}
+
+@media screen and (height <=900px) {
+    .lists {
+        max-height: 55vh;
+        min-height: 55vh;
+    }
+}
+
+@media screen and (height <=780px) {
+    .lists {
+        max-height: 50vh;
+        min-height: 50vh;
     }
 }
