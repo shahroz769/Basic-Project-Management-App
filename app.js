@@ -121,7 +121,7 @@ function addColumn() {
     // Initialize Sortable for the new column
     Sortable.create(list, {
         group: "columns",
-        animation: 150,
+        animation: 300,
         handle: ".drag-handle",
     });
     listInputEvent(counter);
@@ -154,3 +154,7 @@ const listInputEvent = (num) => {
         });
     });
 };
+new Sortable(container, {
+    animation: 300,
+    handle: ".title",
+});
