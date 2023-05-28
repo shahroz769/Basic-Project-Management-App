@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-    <title>Drag & Drop Items</title>
+    <title>Basic Task Mangement</title>
 </head>
 
 <body>
@@ -30,7 +30,13 @@
             <p id="errorMessageInList1" class="errorMessageInList">Please enter column name...</p>
             <div class="outline">
                 <div id="list1" class="lists">
-                    <div class="list" draggable="true"><img src="./Assets/drag-handle.svg" width="32px" class="drag-handle" alt="Drag Handle"><p>Item 1</p></div>
+                    <div class="list">
+                        <div class="list-left"><img draggable="true" src="./Assets/drag-handle.svg" width="32px"
+                                class="drag-handle" alt="Drag Handle">
+                            <p>Item 1</p>
+                        </div>
+                        <img class="list-right" src="./Assets/cross.svg" alt="Cross Icon">
+                    </div>
                     <div class="list" draggable="true">Item 2</div>
                     <div class="list" draggable="true">Item 3</div>
                 </div>

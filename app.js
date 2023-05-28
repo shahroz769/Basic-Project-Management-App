@@ -1,3 +1,4 @@
+let itemCounter = 1;
 function addItem(columnNumber) {
     let itemNumber = "itemName" + columnNumber;
     let itemName = document.getElementById(itemNumber);
@@ -11,21 +12,38 @@ function addItem(columnNumber) {
     errorMessageInList.style.display = "none";
     let listNumber = "list" + columnNumber;
     let list = document.getElementById(listNumber);
+    // Create List Item
     const item = document.createElement("div");
+    // Create List Item Left
+    const itemLeft = document.createElement("div");
+    itemLeft.setAttribute("class", "list-left");
+    // Create List Item Right
+    const itemRight = document.createElement("img");
+    itemRight.setAttribute("class", "list-right");
+    itemRight.setAttribute("src", "./Assets/cross.svg");
+    itemRight.setAttribute("alt", "Cross Icon");
+    itemRight.setAttribute("id", "listItem" + itemCounter);
+    itemRight.setAttribute(
+        "onclick",
+        "deleteListItem(listItem" + itemCounter + ")"
+    );
+    itemCounter += 1;
     const text = document.createElement("p");
     item.setAttribute("class", "list");
-    item.setAttribute("draggable", "true");
     text.textContent = itemName.value;
-    
+
     // create img tag
     const dragImg = document.createElement("img");
     dragImg.setAttribute("src", "./Assets/drag-handle.svg");
     dragImg.setAttribute("width", "32px");
     dragImg.setAttribute("alt", "Drag Handle");
     dragImg.setAttribute("class", "drag-handle");
-    
-    item.appendChild(dragImg);
-    item.appendChild(text);
+    dragImg.setAttribute("draggable", "true");
+
+    itemLeft.appendChild(dragImg);
+    itemLeft.appendChild(text);
+    item.appendChild(itemLeft);
+    item.appendChild(itemRight);
     list.appendChild(item);
     itemName.value = "";
 }
@@ -84,6 +102,10 @@ function addColumn() {
     const list = document.createElement("div");
     list.setAttribute("id", listId);
     list.setAttribute("class", "lists");
+    console.log(list);
+    // Create the list Child
+
+    // append
     title.appendChild(heading);
     column.appendChild(title);
     outline.appendChild(list);
@@ -99,12 +121,14 @@ function addColumn() {
     Sortable.create(list, {
         group: "columns",
         animation: 150,
-        handle: '.drag-handle'
+        handle: ".drag-handle",
     });
     counter += 1;
 }
-
 function deleteColumn(counter) {
     columnToDelete = document.getElementById("column" + counter);
     columnToDelete.remove();
 }
+const deleteListItem = (listItemId) => {
+    console.log(listItemId.parentNode.remove());
+};
