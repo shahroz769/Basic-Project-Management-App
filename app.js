@@ -12,9 +12,20 @@ function addItem(columnNumber) {
     let listNumber = "list" + columnNumber;
     let list = document.getElementById(listNumber);
     const item = document.createElement("div");
+    const text = document.createElement("p");
     item.setAttribute("class", "list");
     item.setAttribute("draggable", "true");
-    item.textContent = itemName.value;
+    text.textContent = itemName.value;
+    
+    // create img tag
+    const dragImg = document.createElement("img");
+    dragImg.setAttribute("src", "./Assets/drag-handle.svg");
+    dragImg.setAttribute("width", "32px");
+    dragImg.setAttribute("alt", "Drag Handle");
+    dragImg.setAttribute("class", "drag-handle");
+    
+    item.appendChild(dragImg);
+    item.appendChild(text);
     list.appendChild(item);
     itemName.value = "";
 }
@@ -63,7 +74,7 @@ function addColumn() {
     title.setAttribute("class", "title");
     // Create the heading
     const heading = document.createElement("h1");
-    heading.textContent = columnName;
+    heading.textContent = columnName.toUpperCase();
     // create delete button div
     const deleteButton = document.createElement("div");
     deleteButton.setAttribute("class", "delete-column-btn");
@@ -74,7 +85,7 @@ function addColumn() {
     list.setAttribute("id", listId);
     list.setAttribute("class", "lists");
     title.appendChild(heading);
-    outline.appendChild(title);
+    column.appendChild(title);
     outline.appendChild(list);
     column.appendChild(input);
     column.appendChild(errorMessageInList);
@@ -88,6 +99,7 @@ function addColumn() {
     Sortable.create(list, {
         group: "columns",
         animation: 150,
+        handle: '.drag-handle'
     });
     counter += 1;
 }

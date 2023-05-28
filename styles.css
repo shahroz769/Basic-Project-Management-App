@@ -15,7 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #18171F;
-    color: aliceblue;
+    color: #ffffff;
     font-family: 'Space Mono', monospace;
     font-size: 16px;
 }
@@ -122,13 +122,18 @@ h1 {
     font-family: 'Space Mono', monospace;
 }
 
+img {
+    display: block;
+}
+
 .list {
     margin: 12px;
     display: flex;
     align-items: center;
+    gap: 6px;
     cursor: grab;
     background-color: #18171F;
-    padding: 12px 12px;
+    padding: 12px 6px;
     border-radius: 8px;
 }
 
@@ -206,7 +211,8 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #CBADF0;
+    color: #C2A6E5;
+    margin-top: 11px;
 }
 
 #errorMessage {
