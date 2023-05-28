@@ -103,9 +103,6 @@ function addColumn() {
     const list = document.createElement("div");
     list.setAttribute("id", listId);
     list.setAttribute("class", "lists");
-    console.log(list);
-    // Create the list Child
-
     // append
     title.appendChild(heading);
     column.appendChild(title);
@@ -131,9 +128,7 @@ function deleteColumn(counter) {
     columnToDelete = document.getElementById("column" + counter);
     columnToDelete.remove();
 }
-const deleteListItem = (listItemId) => {
-    console.log(listItemId.parentNode.remove());
-};
+const deleteListItem = (listItemId) => {};
 
 const columnInputField = document.getElementById("columnName");
 columnInputField.addEventListener("keydown", function (event) {
