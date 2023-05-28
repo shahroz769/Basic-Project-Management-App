@@ -142,18 +142,22 @@ columnInputField.addEventListener("keydown", function (event) {
         addColumn();
     }
 });
-const listInputEvent = (num) => {
-    let listInput = document.querySelectorAll(".itemName");
-
-    listInput.forEach(function (input) {
-        input.addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
+const listInputEvent = () => {
+    let container = document.getElementById("container");
+    container.addEventListener("keydown", function (event) {
+        if (event.key === "Enter") {
+            let focusedInput = document.activeElement;
+            if (focusedInput.classList.contains("itemName")) {
                 event.preventDefault();
-                addItem(num);
+                let columnId = focusedInput.closest(".column").id;
+                let columnNumber = columnId.replace("column", "");
+                addItem(columnNumber);
+                focusedInput.blur(); // Remove focus from the input field
             }
-        });
+        }
     });
 };
+
 new Sortable(container, {
     animation: 300,
     handle: ".title",
