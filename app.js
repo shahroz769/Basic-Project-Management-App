@@ -71,6 +71,7 @@ function addColumn() {
     const inputTag = document.createElement("input");
     inputTag.setAttribute("type", "text");
     inputTag.setAttribute("id", itemName);
+    inputTag.setAttribute("class", "itemName");
     inputTag.setAttribute("placeholder", "Item Name...");
     // Create the "Add Item" button
     const addItemButton = document.createElement("div");
@@ -123,6 +124,7 @@ function addColumn() {
         animation: 150,
         handle: ".drag-handle",
     });
+    listInputEvent(counter);
     counter += 1;
 }
 function deleteColumn(counter) {
@@ -131,4 +133,24 @@ function deleteColumn(counter) {
 }
 const deleteListItem = (listItemId) => {
     console.log(listItemId.parentNode.remove());
+};
+
+const columnInputField = document.getElementById("columnName");
+columnInputField.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        addColumn();
+    }
+});
+const listInputEvent = (num) => {
+    let listInput = document.querySelectorAll(".itemName");
+
+    listInput.forEach(function (input) {
+        input.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                addItem(num);
+            }
+        });
+    });
 };
