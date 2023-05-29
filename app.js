@@ -51,11 +51,13 @@ let counter = 1; // Initialize the counter outside the function
 function addColumn() {
     let columnName = document.getElementById("columnName").value;
     const errorMessage = document.getElementById("errorMessage");
+    const octodox = document.getElementById("octodox");
     if (!columnName) {
         errorMessage.style.display = "block";
         return;
     }
     errorMessage.style.display = "none";
+    octodox.style.display = "none";
     let columnId = "column" + counter;
     let listId = "list" + counter;
     let itemName = "itemName" + counter;
