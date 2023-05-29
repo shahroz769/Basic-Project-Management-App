@@ -26,7 +26,7 @@ h1 {
     width: 100%;
     color: #18171F;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 12px;
     margin: 0px 12px;
     cursor: grab;
 }
@@ -87,7 +87,7 @@ h1 {
     display: flex;
     flex-direction: column;
     background-color: #24232C;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
 .octodox{
@@ -96,7 +96,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 72px;
+    margin-top: 84px;
     height: 100%;
 }
 
@@ -185,7 +185,7 @@ img {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     margin: 12px;
     background-color: #E6E5EA;
@@ -292,7 +292,7 @@ input {
     display: flex;
     width: 90%;
     max-width: 768px;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
     background-color: #E6E5EA;
 }
@@ -334,6 +334,21 @@ input {
         min-height: 50vh;
     }
 }
+
+@media screen and (height <=500px) {
+    .lists {
+        max-height: 45vh;
+        min-height: 45vh;
+    }
+}
+
+@media screen and (height <=400px) {
+    .lists {
+        max-height: 40vh;
+        min-height: 40vh;
+    }
+}
+
 @media screen and (width <=400px) {
     .logo{
         font-size: 14px;
