@@ -78,6 +78,14 @@ function addColumn() {
     const inputTag = document.createElement("input");
     inputTag.setAttribute("type", "text");
     inputTag.setAttribute("id", itemName);
+    inputTag.setAttribute(
+        "onfocus",
+        "focusColumnField(" + itemName + " ,'focus')"
+    );
+    inputTag.setAttribute(
+        "onblur",
+        "focusColumnField(" + itemName + " ,'blur')"
+    );
     inputTag.setAttribute("class", "itemName");
     inputTag.setAttribute("placeholder", "Item Name...");
     // Create the "Add Item" button
@@ -139,7 +147,7 @@ function deleteColumn(counter) {
     columnToDelete.remove();
 }
 const deleteListItem = (listItemId) => {
-    listItemId.parentNode.remove()
+    listItemId.parentNode.remove();
 };
 
 const columnInputField = document.getElementById("columnName");
@@ -169,3 +177,21 @@ new Sortable(container, {
     animation: 300,
     handle: ".title",
 });
+
+const focusField = (event) => {
+    if (event === "focus") {
+        document.querySelector(".columnInput").style.outline =
+            "2.5px solid #635fc7";
+    } else if (event === "blur") {
+        document.querySelector(".columnInput").style.outline = "none";
+    }
+};
+const focusColumnField = (inputElem, event) => {
+    console.log(inputElem.parentNode);
+    if (event === "focus") {
+        inputElem.parentNode.style.outline = "2.5px solid #635fc7";
+    } else if (event === "blur") {
+        console.log("blur");
+        inputElem.parentNode.style.outline = "none";
+    }
+};

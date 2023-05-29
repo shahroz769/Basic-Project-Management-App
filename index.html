@@ -17,7 +17,7 @@
         <h2>Task Management</h2>
     </div>
     <div class="columnInput">
-        <input type="text" id="columnName" placeholder="Column Name...">
+        <input onfocus="focusField('focus')" onblur="focusField('blur')" type="text" id="columnName" placeholder="Column Name...">
         <div class="parent-add-column-btn">
             <div onclick="addColumn()" class="add-column-btn">Add Column</div>
         </div>
