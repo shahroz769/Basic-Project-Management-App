@@ -173,6 +173,7 @@ img {
     border-radius: 8px;
     overflow: hidden;
     margin: 12px;
+    background-color: #E6E5EA;
 }
 
 input {
@@ -199,6 +200,9 @@ input {
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 8px;
+    height: 38px;
+    margin-right: 5px;
 }
 
 .delete-column-btn {
@@ -222,17 +226,25 @@ input {
     background-color: #D8B8FF;
 }
 
+.parent-add-column-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .add-column-btn {
     background-color: #CBADF0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 48px;
-    width: 120px;
+    height: 38px;
+    margin-right: 5px;
+    width: 116px;
     color: #18171F;
     font-weight: 700;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 8px;
 }
 
 .title {
@@ -268,6 +280,7 @@ input {
     max-width: 768px;
     border-radius: 8px;
     overflow: hidden;
+    background-color: #E6E5EA;
 }
 
 .drag-handle {
