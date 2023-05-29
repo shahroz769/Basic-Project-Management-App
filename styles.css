@@ -96,7 +96,8 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 32px;
+    margin-top: 72px;
+    height: 100%;
 }
 
 .octodox img{
@@ -106,6 +107,7 @@ h1 {
 .octodox h4{
     margin-top: 16px;
     text-align: center;
+    max-width: 300px;
 }
 
 .lists {
