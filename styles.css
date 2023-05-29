@@ -31,7 +31,7 @@ h1 {
     cursor: grab;
 }
 
-.logo{
+.logo {
     display: flex;
     gap: 16px;
     margin: 16px;
@@ -90,7 +90,7 @@ h1 {
     border-radius: 16px;
 }
 
-.octodox{
+.octodox {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -100,11 +100,11 @@ h1 {
     height: 100%;
 }
 
-.octodox img{
+.octodox img {
     width: 160px;
 }
 
-.octodox h4{
+.octodox h4 {
     margin-top: 16px;
     text-align: center;
     max-width: 300px;
@@ -176,7 +176,8 @@ img {
     width: 24px;
     cursor: pointer;
 }
-.list-right:hover path{
+
+.list-right:hover path {
     fill: #222222;
 }
 
@@ -240,7 +241,7 @@ input {
     background-color: #D8B8FF;
 }
 
-.parent-add-column-btn{
+.parent-add-column-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -306,7 +307,7 @@ input {
         margin-top: 32px;
     }
 
-    .octodox img{
+    .octodox img {
         width: 150px;
     }
 }
@@ -316,7 +317,7 @@ input {
         margin: 32px 0;
     }
 
-    .octodox img{
+    .octodox img {
         width: 130px;
     }
 }
@@ -350,11 +351,11 @@ input {
 }
 
 @media screen and (width <=400px) {
-    .logo{
+    .logo {
         font-size: 14px;
     }
 
-    .octodox img{
+    .octodox img {
         width: 120px;
     }
 }

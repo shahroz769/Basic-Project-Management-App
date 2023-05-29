@@ -131,7 +131,7 @@ function deleteColumn(counter) {
     columnToDelete.remove();
 }
 const deleteListItem = (listItemId) => {
-    console.log(listItemId.parentNode.remove())
+    listItemId.parentNode.remove()
 };
 
 const columnInputField = document.getElementById("columnName");
