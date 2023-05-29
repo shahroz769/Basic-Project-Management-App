@@ -128,7 +128,9 @@ function deleteColumn(counter) {
     columnToDelete = document.getElementById("column" + counter);
     columnToDelete.remove();
 }
-const deleteListItem = (listItemId) => {};
+const deleteListItem = (listItemId) => {
+    console.log(listItemId.parentNode.remove())
+};
 
 const columnInputField = document.getElementById("columnName");
 columnInputField.addEventListener("keydown", function (event) {
