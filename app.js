@@ -93,7 +93,7 @@ function addColumn() {
     title.setAttribute("class", "title");
     // Create the heading
     const heading = document.createElement("h1");
-    heading.textContent = columnName.toUpperCase();
+    heading.textContent = columnName;
     // create delete button div
     const deleteButton = document.createElement("div");
     deleteButton.setAttribute("class", "delete-column-btn");

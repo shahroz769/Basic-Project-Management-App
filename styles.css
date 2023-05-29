@@ -31,6 +31,14 @@ h1 {
     cursor: grab;
 }
 
+.logo{
+    display: flex;
+    gap: 16px;
+    margin: 16px;
+    justify-content: center;
+    align-items: center;
+}
+
 .container {
     overflow-x: auto;
     width: 90%;
@@ -39,7 +47,7 @@ h1 {
     align-items: center;
     scrollbar-color: #c5c5c5 #404149;
     scrollbar-width: thin;
-    margin-top: 60px;
+    margin: 32px;
 }
 
 .container::-moz-scrollbar {
@@ -260,7 +268,6 @@ input {
     max-width: 768px;
     border-radius: 8px;
     overflow: hidden;
-    margin-top: 60px;
 }
 
 .drag-handle {
@@ -268,22 +275,12 @@ input {
 }
 
 @media screen and (width <=768px) {
-
-    .columnInput {
-        margin-top: 48px;
-    }
-
     .container {
-        margin-top: 48px;
+        margin-top: 32px;
     }
 }
 
 @media screen and (width <=500px) {
-
-    .columnInput {
-        margin-top: 32px;
-    }
-
     .container {
         margin: 32px 0;
     }
@@ -300,5 +297,10 @@ input {
     .lists {
         max-height: 50vh;
         min-height: 50vh;
+    }
+}
+@media screen and (width <=400px) {
+    .logo{
+        font-size: 14px;
     }
 }
