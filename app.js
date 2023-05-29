@@ -46,7 +46,12 @@ function addItem(columnNumber) {
     item.appendChild(itemRight);
     list.appendChild(item);
     itemName.value = "";
+
+    setTimeout(() => {
+        itemName.focus();
+    }, 10);
 }
+
 let counter = 1; // Initialize the counter outside the function
 function addColumn() {
     let columnName = document.getElementById("columnName").value;
@@ -125,6 +130,9 @@ function addColumn() {
     });
     listInputEvent(counter);
     counter += 1;
+    setTimeout(() => {
+        columnInput.focus();
+    }, 10);
 }
 function deleteColumn(counter) {
     columnToDelete = document.getElementById("column" + counter);
